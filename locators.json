@@ -1,0 +1,45 @@
+{
+    "ordernumber": {
+        "type": "browser",
+        "source": "https://robotsparebinindustries.com/#/robot-order",
+        "strategy": "css",
+        "value": ".badge",
+        "element": {
+            "tag": "P",
+            "type": null,
+            "modifier": null
+        },
+        "alternatives": [
+            {
+                "strategy": "css",
+                "value": ".badge",
+                "matches": 1
+            },
+            {
+                "strategy": "xpath:relative-id",
+                "value": "//div[@id='receipt']/p",
+                "matches": 1
+            },
+            {
+                "strategy": "xpath:position",
+                "value": "//div/div/div/div/div/div/p",
+                "matches": 1
+            },
+            {
+                "strategy": "xpath:inner-text",
+                "value": "//p[contains(.,'RSB-ROBO-ORDER-5LNDA334Q4')]",
+                "matches": 1
+            }
+        ],
+        "screenshot": "data:image/png;base64,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",
+        "frame": {
+            "name": "",
+            "title": "RobotSpareBin Industries Inc. - Intranet",
+            "url": "https://robotsparebinindustries.com/#/robot-order",
+            "sourceURL": "https://robotsparebinindustries.com/#/robot-order",
+            "isMain": true,
+            "props": null
+        },
+        "name": "ordernumber"
+    }
+}
